@@ -21,11 +21,8 @@ const Login = () => {
 
         if (response.ok) {
             const data = await response.json();
-            console.log('Authentication successful:', data.message);
             navigate(data.redirectUrl);
         } else {
-            const errorData = await response.json();
-            console.error('Authentication failed:', errorData.message);
             setError('Wrong Email/Password')
         }
     };
