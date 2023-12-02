@@ -16,19 +16,17 @@ AWS.config.update({
 
 const dynamoDB = new AWS.DynamoDB.DocumentClient();
 
-app.get('/', async (req, res) => {
-    try {
-        const params = {
-            TableName: 'UsersTable',
-        };
+app.get('/', async(req, res) => {
+    const username = "test"
 
-        const result = await dynamoDB.scan(params).promise();
+    const params = {
+         TableName: 'UsersTable',
+         Key: { username },
+    };
 
-        res.status(200).json(result.Items);
-    } catch (error) {
-        console.error('Error during scan:', error);
-        res.status(500).json({ message: 'Internal server error' });
-    }
+    const result = await dynamoDB.scan(params).promise();
+
+    res.send(result);
 });
 
 app.post('/login', async (req, res) => {
@@ -45,7 +43,11 @@ app.post('/login', async (req, res) => {
 
         if (result.Item && result.Item.password === password) {
             // Successful authentication
-            res.status(200).json({ message: 'Authentication successful' });
+            res.status(200).json({
+                message: 'Authentication successful',
+                success: true,
+                redirectUrl: '/dashboard'
+            });
         } else {
             // Failed authentication
             res.status(401).json({ message: 'Invalid credentials' });

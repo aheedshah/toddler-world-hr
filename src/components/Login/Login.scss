@@ -1,0 +1,52 @@
+.login-container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../../../public/images/landing-image.webp') center/cover fixed;
+
+    img{
+        width: 350px; /* Adjust the logo size as needed */
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    input {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+
+    }
+
+    button {
+        background-color: orange;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: darkorange;
+    }
+
+    input:focus::placeholder,
+    textarea:focus::placeholder{
+        font-size: 10px;
+        transform: translateY(-12px);
+        transition: font-size 0.3s, transform 0.3s;
+    }
+}
