@@ -11,6 +11,7 @@
         margin-bottom: 20px;
         text-align: center;
     }
+
     form {
         display: flex;
         flex-direction: column;
@@ -26,7 +27,6 @@
         margin-bottom: 10px;
         border: 1px solid #ddd;
         border-radius: 5px;
-
     }
 
     button {
@@ -41,6 +41,7 @@
 
     button:hover {
         background-color: darkorange;
+        transition: ease-in-out 0.5s;
     }
 
     input:focus::placeholder,
