@@ -1,5 +1,9 @@
 # HR Software for Toddler World
 
+![Build and Test workflow](https://github.com/aheedshah/toddler-world-hr/actions/workflows/build_test_react.yml/badge.svg)
+[![codecov](https://codecov.io/gh/aheedshah/toddler-world-hr/graph/badge.svg?token=57OH7CZD9F)](https://codecov.io/gh/aheedshah/toddler-world)
+[![Linter](https://github.com/aheedshah/toddler-world/actions/workflows/linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
+
 ## Available Scripts
 
 In the project directory, you can run:
