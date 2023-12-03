@@ -23,8 +23,8 @@ describe('Login Component', () => {
         render(<Login />);
 
         // Simulate user input
-        userEvent.type(screen.getByPlaceholderText('Email'), 'test@example.com');
-        userEvent.type(screen.getByPlaceholderText('Password'), 'password123');
+        await userEvent.type(screen.getByPlaceholderText('Email'), 'test@example.com');
+        await userEvent.type(screen.getByPlaceholderText('Password'), 'password123');
 
         // Assert that the input values are updated
         expect(screen.getByPlaceholderText('Email').value).toBe('test@example.com');
@@ -44,8 +44,8 @@ describe('Login Component', () => {
         });
 
         // Simulate user input
-        userEvent.type(screen.getByPlaceholderText('Email'), 'test@example.com');
-        userEvent.type(screen.getByPlaceholderText('Password'), 'password123');
+        await userEvent.type(screen.getByPlaceholderText('Email'), 'test@example.com');
+        await userEvent.type(screen.getByPlaceholderText('Password'), 'password123');
 
         // Simulate form submission
         fireEvent.submit(screen.getByRole('button', { name: 'Login' }));
@@ -73,8 +73,8 @@ describe('Login Component', () => {
         });
 
         // Simulate user input
-        userEvent.type(screen.getByPlaceholderText('Email'), 'invalid@example.com');
-        userEvent.type(screen.getByPlaceholderText('Password'), 'invalidpassword');
+        await userEvent.type(screen.getByPlaceholderText('Email'), 'invalid@example.com');
+        await userEvent.type(screen.getByPlaceholderText('Password'), 'invalidpassword');
 
         // Simulate form submission
         fireEvent.submit(screen.getByRole('button', { name: 'Login' }));
