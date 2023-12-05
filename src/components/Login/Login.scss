@@ -7,7 +7,7 @@
     background: url('../../../public/images/landing-image.webp') center/cover fixed;
 
     img {
-        width: 350px; /* Adjust the logo size as needed */
+        width: 350px;
         margin-bottom: 20px;
         text-align: center;
     }
@@ -15,9 +15,9 @@
     form {
         display: flex;
         flex-direction: column;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 10px rgb(0 0 0 / 20%);
         text-align: center;
-        background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+        background-color: rgb(255 255 255 / 80%);
         padding: 20px;
         border-radius: 10px;
     }

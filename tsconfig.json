@@ -15,8 +15,8 @@
     "jsx": "react-jsx",
     "types": ["node", "jest", "@testing-library/jest-dom"],
     "noEmit": true,
-    "downlevelIteration": true,
+    "downlevelIteration": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/*.ts", "src/*.tsx"],
   "exclude": ["node_modules"]
 }
