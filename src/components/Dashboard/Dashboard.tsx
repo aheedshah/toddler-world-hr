@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 const Dashboard: React.FC = () => {
-    return(
-        <>
-            Hello World
-        </>
-    )
+  return (
+    <>
+      Hello World
+    </>
+  )
 }
 
-export default Dashboard;
+export default Dashboard
