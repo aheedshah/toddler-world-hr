@@ -1,17 +1,18 @@
-import React, {useState} from 'react';
+import React, {FormEvent, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.scss'
+import { BASE_URL } from '../../apiConfig';
 
-const Login = () => {
+const Login: React.FC = () => {
     let navigate = useNavigate();
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+    const [username, setUsername] = useState<String>('');
+    const [password, setPassword] = useState<String>('');
+    const [error, setError] = useState<String>('');
 
-    const handleLogin = async (e) => {
+    const handleLogin = async (e: FormEvent) => {
         e.preventDefault();
 
-        const response = await fetch('http://localhost:3001/login', {
+        const response = await fetch(`${BASE_URL}/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -33,18 +34,16 @@ const Login = () => {
                 <img src="/images/logo.webp" alt="Toddler World Logo" /> <br />
                 <input type="email"
                        placeholder='Email'
-                       value={username}
                        onChange={(e) => setUsername(e.target.value)}
                        required
                 /> <br />
                 <input type="password"
                        placeholder='Password'
-                       value={password}
                        onChange={(e) => setPassword(e.target.value)}
                        required
                 /> <br />
                 <button type="submit">Login</button>
-                {error && <p style={{ color: 'red' }}>{error}</p>}
+                {error && <p>{error}</p>}
             </form>
         </div>
     );

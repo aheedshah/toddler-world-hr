@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Login/Login';
-import Dashboard from './Dashboard';
+import Dashboard from './components/Dashboard/Dashboard';
 
-const App = () => {
+const App: React.FC =  () => {
     return (
         <Router>
             <Routes>

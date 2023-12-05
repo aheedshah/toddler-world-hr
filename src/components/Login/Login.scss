@@ -6,7 +6,7 @@
     height: 100vh;
     background: url('../../../public/images/landing-image.webp') center/cover fixed;
 
-    img{
+    img {
         width: 350px; /* Adjust the logo size as needed */
         margin-bottom: 20px;
         text-align: center;
@@ -45,9 +45,13 @@
     }
 
     input:focus::placeholder,
-    textarea:focus::placeholder{
+    textarea:focus::placeholder {
         font-size: 10px;
         transform: translateY(-12px);
         transition: font-size 0.3s, transform 0.3s;
+    }
+
+    p {
+        color: red;
     }
 }

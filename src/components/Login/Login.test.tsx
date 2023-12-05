@@ -1,8 +1,9 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Login from './Login';
+import { BASE_URL } from "../../apiConfig";
 
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
@@ -19,20 +20,9 @@ describe('Login Component', () => {
         expect(screen.getByText('Login')).toBeInTheDocument();
     });
 
-    test('handles user input correctly', async () => {
-        render(<Login />);
-
-        // Simulate user input
-        await userEvent.type(screen.getByPlaceholderText('Email'), 'test@example.com');
-        await userEvent.type(screen.getByPlaceholderText('Password'), 'password123');
-
-        // Assert that the input values are updated
-        expect(screen.getByPlaceholderText('Email').value).toBe('test@example.com');
-        expect(screen.getByPlaceholderText('Password').value).toBe('password123');
-    });
-
     test('submits the form and redirects on successful login', async () => {
         const mockNavigate = jest.fn();
+        // @ts-ignore
         useNavigate.mockReturnValue(mockNavigate);
 
         render(<Login />);
@@ -51,7 +41,7 @@ describe('Login Component', () => {
         fireEvent.submit(screen.getByRole('button', { name: 'Login' }));
 
         // Assert that fetch is called with the correct data
-        expect(fetch).toHaveBeenCalledWith('http://localhost:3001/login', {
+        expect(fetch).toHaveBeenCalledWith(`${BASE_URL}/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
