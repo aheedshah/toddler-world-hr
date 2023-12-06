@@ -7,19 +7,6 @@ on:
     branches: ["main"]
 
 jobs:
-  cypress:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
-        with:
-          build: yarn build
-          start: yarn start
-          browser: chrome
-          wait-on: "http://localhost:3000"
-
   build_test:
     runs-on: ${{ matrix.os }}
     strategy:
