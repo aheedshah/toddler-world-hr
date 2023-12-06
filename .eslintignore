@@ -1,2 +1,3 @@
 /src/setupTests.ts
 /src/apiConfig.ts
+/cypress/*.ts
