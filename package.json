@@ -14,7 +14,6 @@
     "body-parser": "^1.20.2",
     "concurrently": "^8.2.2",
     "cors": "^2.8.5",
-    "cypress": "^13.6.1",
     "express": "^4.18.2",
     "nodemon": "^3.0.2",
     "react": "^18.2.0",
@@ -32,10 +31,7 @@
     "start:backend": "nodemon server/server.js",
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
-    "eject": "react-scripts eject",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "test": "react-scripts test --coverage"
   },
   "eslintConfig": {
     "extends": [
