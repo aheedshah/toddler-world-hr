@@ -1,11 +1,12 @@
 import React from 'react'
+import Sidebar from "../Sidebar/Sidebar";
 
 const Dashboard: React.FC = () => {
-  return (
-    <>
-      Hello World
-    </>
-  )
+    return (
+        <>
+            <Sidebar />
+        </>
+    );
 }
 
 export default Dashboard

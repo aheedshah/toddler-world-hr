@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
@@ -15,10 +18,12 @@
     "nodemon": "^3.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-pro-sidebar": "^1.1.0-alpha.1",
     "react-router-dom": "^6.20.1",
     "react-scripts": "5.0.1",
     "sass": "^1.69.5",
     "typescript": "^5.3.2",
+    "usehooks-ts": "^2.9.1",
     "web-vitals": "^3.5.0"
   },
   "scripts": {
@@ -26,8 +31,7 @@
     "start:backend": "nodemon server/server.js",
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --coverage"
   },
   "eslintConfig": {
     "extends": [
