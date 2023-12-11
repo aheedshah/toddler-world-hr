@@ -1,2 +1,7 @@
 /src/setupTests.ts
 /src/apiConfig.ts
+node_modules
+coverage
+docker
+src/reportWebVitals.js
+server/*

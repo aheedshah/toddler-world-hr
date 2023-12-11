@@ -10,6 +10,7 @@
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",
     "@types/jest": "^29.5.10",
+    "@types/react-datepicker": "^4.19.3",
     "aws-sdk": "^2.1510.0",
     "body-parser": "^1.20.2",
     "concurrently": "^8.2.2",
@@ -17,6 +18,7 @@
     "express": "^4.18.2",
     "nodemon": "^3.0.2",
     "react": "^18.2.0",
+    "react-datepicker": "^4.24.0",
     "react-dom": "^18.2.0",
     "react-pro-sidebar": "^1.1.0-alpha.1",
     "react-router-dom": "^6.20.1",
@@ -31,7 +33,10 @@
     "start:backend": "nodemon server/server.js",
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage"
+    "test": "react-scripts test --coverage",
+    "eject": "react-scripts eject",
+    "lint": "eslint . --ext .tsx",
+    "lint-fix": "eslint . --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -50,5 +55,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.1.1"
   }
 }
