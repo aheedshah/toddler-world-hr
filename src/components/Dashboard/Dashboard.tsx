@@ -1,12 +1,11 @@
-import React from 'react'
-import Sidebar from "../Sidebar/Sidebar";
+import React from "react";
 
 const Dashboard: React.FC = () => {
-    return (
-        <>
-            <Sidebar />
-        </>
-    );
-}
+	return (
+		<div className='main-div'>
+			<main className='mains'>Hello World</main>
+		</div>
+	);
+};
 
-export default Dashboard
+export default Dashboard;

@@ -33,3 +33,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Things to remember:
 - The sidebar comes from: [react-pro-slider](https://www.npmjs.com/package/react-pro-sidebar)
+- The Calendar: [https://reactdatepicker.com/](https://reactdatepicker.com/)
