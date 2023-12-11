@@ -5,3 +5,5 @@ coverage
 docker
 src/reportWebVitals.js
 server/*
+.eslintrc.json
+package.json

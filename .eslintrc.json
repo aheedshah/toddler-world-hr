@@ -17,11 +17,11 @@
       "printWidth": 119,
       "trailingComma": "es5",
       "semi": true,
-      "doubleQuote":true,
+      "doubleQuote": true,
       "jsxSingleQuote": true,
       "singleQuote": false,
       "useTabs": true,
-      "tabWidth":4
+      "tabWidth": 4
     }]
   }
 }
