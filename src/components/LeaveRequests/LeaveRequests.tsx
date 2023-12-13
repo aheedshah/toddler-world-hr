@@ -42,7 +42,7 @@ const LeaveRequests: React.FC = () => {
 	};
 
 	return (
-		<div className='payroll-container'>
+		<div className='leave-request-container'>
 			<h1>
 				<FontAwesomeIcon icon={faCalendarDays} /> Leave Request
 			</h1>
