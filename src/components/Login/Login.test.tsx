@@ -31,11 +31,11 @@ describe("Login Component", () => {
 		global.fetch = jest.fn().mockResolvedValueOnce({
 			ok: true,
 			json: async () => ({
-				message: "Authentication successful"
+				message: "Authentication successful",
 			}),
 			headers: {
-				get: () => "/dashboard"
-			}
+				get: () => "/dashboard",
+			},
 		});
 
 		// Simulate user input
@@ -69,8 +69,8 @@ describe("Login Component", () => {
 			ok: false,
 			json: async () => ({ message: "Authentication failed" }),
 			headers: {
-				get: () => "/dashboard"
-			}
+				get: () => "/dashboard",
+			},
 		});
 
 		// Simulate user input
