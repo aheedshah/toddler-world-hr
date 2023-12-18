@@ -27,4 +27,11 @@ describe("DateSubtraction", () => {
 		// Expected result: 0 days (Weekend only)
 		expect(DateSubtraction(startDate, endDate)).toBe(0);
 	});
+
+	test("it should handle cases where the end day is Saturday and start day is not Sunday", () => {
+		const startDate = new Date("2023-01-05"); // Thursday
+		const endDate = new Date("2023-01-07"); // Saturday
+		// Expected result: 2 days (Thursday and Friday)
+		expect(DateSubtraction(startDate, endDate)).toBe(2);
+	});
 });

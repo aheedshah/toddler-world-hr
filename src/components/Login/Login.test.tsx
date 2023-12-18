@@ -32,8 +32,10 @@ describe("Login Component", () => {
 			ok: true,
 			json: async () => ({
 				message: "Authentication successful",
-				redirectUrl: "/dashboard",
 			}),
+			headers: {
+				get: () => "/dashboard",
+			},
 		});
 
 		// Simulate user input
@@ -44,7 +46,7 @@ describe("Login Component", () => {
 		fireEvent.submit(screen.getByRole("button", { name: "Login" }));
 
 		// Assert that fetch is called with the correct data
-		expect(fetch).toHaveBeenCalledWith(`${BASE_URL}/login`, {
+		expect(fetch).toHaveBeenCalledWith(`${BASE_URL}/authenticate`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -66,6 +68,9 @@ describe("Login Component", () => {
 		global.fetch = jest.fn().mockResolvedValueOnce({
 			ok: false,
 			json: async () => ({ message: "Authentication failed" }),
+			headers: {
+				get: () => "/dashboard",
+			},
 		});
 
 		// Simulate user input
