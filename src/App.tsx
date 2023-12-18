@@ -7,14 +7,13 @@ import LeaveRequests from "./components/LeaveRequests/LeaveRequests";
 import Payroll from "./components/Payroll/Payroll";
 
 const App: React.FC = () => {
-	const pathName = window.location.pathname;
-	const arr = pathName.toString().split("/");
-	const currentPath = arr[arr.length - 1];
+	const pathName: string[] = window.location.pathname.toString().split("/");
+	const currentPathLength: number = pathName[pathName.length - 1].length;
 
 	return (
 		<>
 			<Router>
-				{currentPath.length > 0 && <Sidebar />}
+				{currentPathLength > 0 && <Sidebar />}
 				<Routes>
 					<Route path='/' element={<Login />} />
 					<Route path='/dashboard' element={<Dashboard />} />

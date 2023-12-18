@@ -12,7 +12,7 @@ const Login: React.FC = () => {
 	const handleLogin = async (e: FormEvent) => {
 		e.preventDefault();
 
-		const response = await fetch(`${BASE_URL}/login`, {
+		const response = await fetch(`${BASE_URL}/authenticate`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -21,8 +21,8 @@ const Login: React.FC = () => {
 		});
 
 		if (response.ok) {
-			const data = await response.json();
-			navigate(data.redirectUrl);
+			const redirect: string = response.headers.get("redirectUrl") ?? "/dashboard";
+			navigate(redirect);
 		} else {
 			setError("Wrong Email/Password");
 		}

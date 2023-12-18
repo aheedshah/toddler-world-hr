@@ -15,7 +15,7 @@
     [ "error", {
       "endOfLine":"auto",
       "printWidth": 119,
-      "trailingComma": "es5",
+      "trailingComma": "es6",
       "semi": true,
       "doubleQuote": true,
       "jsxSingleQuote": true,
