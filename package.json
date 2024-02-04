@@ -23,7 +23,7 @@
     "react-pro-sidebar": "^1.1.0-alpha.1",
     "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1",
-    "sass": "^1.69.7",
+    "sass": "^1.70.0",
     "typescript": "^5.3.3",
     "usehooks-ts": "^2.9.4",
     "web-vitals": "^3.5.2"
